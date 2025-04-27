@@ -5,7 +5,7 @@ from cinema.views import (
     ActorDetail,
     GenreList,
     GenreDetail,
-    CinemaViewSet,
+    CinemaHallViewSet,
     MovieViewSet
 )
 
@@ -17,8 +17,8 @@ movie_detail = MovieViewSet.as_view({
     "delete": "destroy"
 })
 
-cinema_list = CinemaViewSet.as_view({"get": "list", "post": "create"})
-cinema_detail = CinemaViewSet.as_view({
+cinema_list = CinemaHallViewSet.as_view({"get": "list", "post": "create"})
+cinema_detail = CinemaHallViewSet.as_view({
     "get": "retrieve",
     "put": "update",
     "patch": "partial_update",
